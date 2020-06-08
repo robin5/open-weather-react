@@ -20,8 +20,12 @@ class CountrySelect extends React.Component {
   render() {
     return (
       <>
-        <input type="text" list="browsers" name="browser" id="browser" />
-        <datalist id="browsers">
+        <input
+          type="text"
+          list="Country-select-countries"
+          onChange={this.props.onChange}
+        />
+        <datalist id="Country-select-countries">
           {this.state.cities.map((city, i) => (
             <option key={`city-${i}`} value={city.name}></option>
           ))}

@@ -6,20 +6,19 @@ import CountrySelect from "./CountrySelect.js";
 import CitySelect from "./CitySelect.js";
 
 class App extends React.Component {
+  
   state = {
     city: "",
     country: "",
   };
 
-  constructor(props) {
-    super(props);
-
-    this.country = "";
-  }
-
   onChangeCountry = (e) => {
-    console.log(`New country ${e.target.value}`);
     this.setState({ country: e.target.value });
+  };
+
+  onChangeCity = (e) => {
+    console.log(`city: ${e.target.value}`)
+    this.setState({ city: e.target.value });
   };
 
   render() {
@@ -42,11 +41,11 @@ class App extends React.Component {
           <section id="App-section-config">
             <div className="App-section-config-entry">
               <label className="App-section-config-label">Country </label>
-              <CountrySelect onChange={this.onChangeCountry} default="US" />
+              <CountrySelect default="US" onChange={this.onChangeCountry} />
             </div>
             <div className="App-section-config-entry">
               <label className="App-section-config-label">City</label>
-              <CitySelect country={this.state.country} />
+              <CitySelect country={this.state.country} onChange={this.onChangeCity} />
             </div>
           </section>
           <hr />

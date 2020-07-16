@@ -11,72 +11,128 @@
  * Lt Yellow     #FFD875
  *****************************************/
 
- body {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	/*background-color: #252D40; /* Midnight Blue */
-	/*color: white;*/
-	height: 100px;
-	margin: 20px;
-	background: radial-gradient(#fceabb, #f8b500);
-	background-repeat: repeat;
-}
- header h1 {
- 	font-size: 3em;
- 	letter-spacing: 3px;
-	/*color: white;
-    text-shadow: 1px 1px 2px #f8b500, 0 0 25px #f8b500, 0 0 5px darkblue;*/
-}
-
-
-.input-parameters {
-	/*border: 1px solid red;*/
-	margin-bottom: 60px;
-}
-
 .day-wrapper {
-	border: 1px solid white;
-    box-shadow: 5px 5px 5px grey;
-    width: 18%;
+  border: 1px solid white;
+  box-shadow: 5px 5px 5px grey;
+  width: 18%;
 }
 
 .day-header {
-	border-bottom: 1px solid white;
-	text-align: center;
-	font-size: 2em;
-	padding: 10px 0 10px 0;
+  border-bottom: 1px solid white;
+  text-align: center;
+  font-size: 2em;
+  padding: 10px 0 10px 0;
 }
 
 .day-report-wrapper {
-	min-height: 200px;
-	text-align: center;
+  min-height: 200px;
+  text-align: center;
 }
 
 .day-report-weather-icon {
-	width: 45%;
+  width: 45%;
 }
 
 .day-report-temp {
-	display: block;
-	font-size: 3em;
-	color: white;
-	padding: 15px;
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cfe7fa+0,6393c1+100;Grey+Blue+3D */
-background: #cfe7fa; /* Old browsers */
-background: -moz-linear-gradient(top, #cfe7fa 0%, #6393c1 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, #cfe7fa 0%,#6393c1 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, #cfe7fa 0%,#6393c1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfe7fa', endColorstr='#6393c1',GradientType=0 ); /* IE6-9 */
+  display: block;
+  font-size: 3em;
+  color: white;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cfe7fa+0,6393c1+100;Grey+Blue+3D */
+  background: #cfe7fa; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #cfe7fa 0%,
+    #6393c1 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #cfe7fa 0%,
+    #6393c1 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #cfe7fa 0%,
+    #6393c1 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfe7fa', endColorstr='#6393c1',GradientType=0 ); /* IE6-9 */
 }
 
 .day-report-measure {
-	display: block;
-	font-size: 1em;
-	color: black;
-    padding: 10px 0 0 0;
-    text-align: left;
-    margin-left: 20px;
+  display: block;
+  font-size: 1em;
+  color: black;
+  padding: 10px 0 0 0;
+  text-align: left;
+  margin-left: 20px;
 }
 
 .day-report-measure:last-child {
-	padding: 10px 0 10px 0;
+  padding: 10px 0 10px 0;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .day-wrapper {
+    margin-bottom: 20px;
+    border: 1px solid white;
+    box-shadow: 5px 5px 5px grey;
+	width: 90%;
+	max-width: 250px;
+  }
+  .day-header {
+    font-size: 2.5em;
+    padding: 10px 0 10px 0;
+  }
+  .day-report-temp {
+    font-size: 2em;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .day-header {
+    font-size: 1.3em;
+    padding: 2px 0 2px 0;
+  }
+  .day-report-temp {
+    font-size: 1.3em;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .day-header {
+    font-size: 2em;
+    padding: 4px 0 4px 0;
+  }
+  .day-report-temp {
+    font-size: 2em;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	.day-header {
+		font-size: 2.5em;
+		padding: 4px 0 4px 0;
+	  }
+	  .day-report-temp {
+    font-size: 2.5em;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .day-wrapper {
+    border: 1px solid white;
+    box-shadow: 5px 5px 5px grey;
+    width: 18%;
+  }
+  .day-header {
+    font-size: 3em;
+    padding: 10px 0 10px 0;
+  }
+  .day-report-temp {
+    font-size: 3em;
+  }
 }
